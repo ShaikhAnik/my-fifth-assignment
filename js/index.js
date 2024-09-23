@@ -15,7 +15,7 @@
         const newTotalBalance = totalBalanceFinal - addDonation;
         totalBalance.innerText = newTotalBalance;
         
-        
+       
         
         }else{
             alert("Invalid Donation Amount");
@@ -73,5 +73,6 @@ document.getElementById('btn-add-donate3').addEventListener('click',function(){
 })
  
  
- 
+
+
  
