@@ -32,11 +32,11 @@
 
 </head>
 <body class="font-lexend">
-    <header class="w-11/12 mx-auto sticky top-0 z-50 ">
+    <header class=" sticky top-0 z-50 ">
 
         <!--nav start-->
-        <nav>
-            <div class="navbar bg-base-100 relative">
+        <nav class="w-11/12 mx-auto">
+            <div class="navbar bg-white relative">
                 <div class="navbar-start">
                     <button class="btn px-8  bg-[#B4F461] font-semibold text-xl"><a href="#">Blog</a></button>
                 </div>
@@ -56,22 +56,23 @@
                 </div>
               </div>
         </nav>
-    </header>
-        <main class="w-11/12 mx-auto relative ">
-         <!--two btn start-->
-         <section class="text-center mt-24 ">
+        <!--two btn start-->
+        <section class="text-center pt-16 bg-white pb-10">
             <div class="space-x-5"> 
-                <button class=" btn border border-solid border-[#1111114d] text-[#111111b3] transition-colors duration-200 text-xl ease-in-out font-semibold rounded-lg hover:bg-secondary hover:text-primary w-40">Donation</button>
-                <button class="btn border border-solid border-[#1111114d] text-[#111111b3] transition-colors duration-200 text-xl ease-in-out font-semibold rounded-lg hover:bg-secondary hover:text-primary w-40">History</button>
+                <button id="donation-btn" class=" bg-secondary text-primary btn ease-in-out  transition-colors duration-200  text-xl  font-semibold rounded-lg  w-40">Donation</button>
+                <button id="history-button" class="btn    transition-colors duration-200 text-xl ease-in-out font-semibold rounded-lg  w-40">History</button>
             </div>
           
          </section>
+    </header>
+        <main class="w-11/12 mx-auto relative ">
+        
          
          <!--donation card start-->
 
-          <section class="mt-20">
+          <section id="card-section">
               <!--card 1-->
-              <div class="card lg:card-side bg-base-100 shadow-xl border border-solid border-[#1111111a] p-8">
+              <div class=" mt-6 card lg:card-side bg-base-100 shadow-xl border border-solid border-[#1111111a] p-8">
                 <figure>
                   <img
                     src="assets/noakhali.png"
@@ -128,7 +129,7 @@
 
               <!--card 3-->
 
-              <div class="card mt-20 lg:card-side bg-base-100 shadow-xl border border-solid border-[#1111111a] p-8">
+              <div class=" mb-32 card mt-20 lg:card-side bg-base-100 shadow-xl border border-solid border-[#1111111a] p-8">
                 <figure>
                   <img
                     src="assets/quota-protest.png"
@@ -138,7 +139,7 @@
                     <div>
                         <p class="flex items-center justify-items-center   w-36 bg-[#1111110D] rounded-lg py-2.5 px-4 ">
                             <img src="assets/coin.png" alt="coin">
-                            <span id="donation-balance3" class=" font-medium  text-[#111111b3] ml-2">2776</span>
+                            <span id="donation-balance3" class=" font-medium  text-[#111111b3] ml-2">2400</span>
                             <span class=" font-medium text-[#111111b3] ml-1">BDT</span>
                         </p>
                     </div>
@@ -151,7 +152,7 @@
                   <div class="card-actions justify-end">
                     <button onclick="my_modal_5.showModal()" id="btn-add-donate3" class="btn  hover:bg-[#b4f461b3] hover:text-primary text-primary btn-primary w-full bg-secondary border-none  text-xl   ">Donate Now</button>
                      
-                    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle ">
                         <div class="modal-box flex flex-col items-center">
                             <h3 class="text-4xl font-extrabold ">Congrates!</h3>
                              <img class=" mt-3 " src="assets/coin.png" alt="coin">
@@ -169,7 +170,10 @@
                 </div>
               </div>
           </section>
-          <!--Modal start-->
+          <!--history start-->
+          <div id="history-donation">
+
+          </div>
           
     </main>
     
