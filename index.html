@@ -36,13 +36,13 @@
 
         <!--nav start-->
         <nav class="w-11/12 mx-auto">
-            <div class="navbar bg-white relative">
+            <div class="navbar bg-white relative ">
                 <div class="navbar-start">
-                    <button class="btn px-8  bg-[#B4F461] font-semibold text-xl"><a href="#">Blog</a></button>
+                    <a href="blog.html"> <button class="btn px-8  bg-[#B4F461] font-semibold text-xl">Blog</button></a>
                 </div>
                 <div class="navbar-center">
-                    <img src="assets/logo.png" alt="logo" >
-                  <a class=" text-xl font-semibold text-primary ml-2" href="#">Donate Bangladesh</a>
+                    <img src="assets/logo.png" alt="logo">
+                  <a class=" text-xl font-semibold text-primary ml-2 hidden lg:block " href="#">Donate Bangladesh</a>
                 </div>
                 <div class="navbar-end">
                         <div>
@@ -57,7 +57,7 @@
               </div>
         </nav>
         <!--two btn start-->
-        <section class="text-center pt-16 bg-white pb-10">
+        <section class="text-center pt-8 bg-white pb-7">
             <div class="space-x-5"> 
                 <button id="donation-btn" class=" bg-secondary text-primary btn ease-in-out  transition-colors duration-200  text-xl  font-semibold rounded-lg  w-40">Donation</button>
                 <button id="history-button" class="btn    transition-colors duration-200 text-xl ease-in-out font-semibold rounded-lg  w-40">History</button>
@@ -72,15 +72,13 @@
 
           <section id="card-section">
               <!--card 1-->
-              <div class=" mt-6 card lg:card-side bg-base-100 shadow-xl border border-solid border-[#1111111a] p-8">
+              <div class=" mt-2 card lg:card-side bg-base-100 shadow-xl border border-solid border-[#1111111a] p-8">
                 <figure>
-                  <img
-                    src="assets/noakhali.png"
-                    alt="Album" />
+                  <img src="assets/noakhali.png" alt="Album" />
                 </figure>
-                <div class="card-body w-2/5 py-0">
+                <div class="card-body lg:w-2/5 py-0">
                     <div>
-                        <p class="flex items-center   w-36 bg-[#1111110D] rounded-lg py-2.5 px-4 ">
+                        <p class="flex items-center  w-36 bg-[#1111110D] rounded-lg py-2.5 px-4  ">
                             <img src="assets/coin.png" alt="coin">
                             <span id="donation-balance" class=" font-medium text-[#111111b3] ml-2">0</span>
                             <span class=" font-medium text-[#111111b3] ml-1">BDT</span>
@@ -101,11 +99,9 @@
               <!--card 2-->
               <div class="card mt-20 lg:card-side bg-base-100 shadow-xl border border-solid border-[#1111111a] p-8">
                 <figure>
-                  <img
-                    src="assets/feni.png"
-                    alt="Album" />
+                  <img src="assets/feni.png" alt="Album" />
                 </figure>
-                <div class="card-body w-2/5 py-0">
+                <div class="card-body lg:w-2/5 lg:py-0">
                     <div>
                         <p class="flex items-center   w-36 bg-[#1111110D] rounded-lg py-2.5 px-4 ">
                             <img src="assets/coin.png" alt="coin">
@@ -131,11 +127,9 @@
 
               <div class=" mb-32 card mt-20 lg:card-side bg-base-100 shadow-xl border border-solid border-[#1111111a] p-8">
                 <figure>
-                  <img
-                    src="assets/quota-protest.png"
-                    alt="Album" />
+                  <img src="assets/quota-protest.png" alt="Album" />
                 </figure>
-                <div class="card-body w-2/5 py-0">
+                <div class="card-body lg:w-2/5 lg:py-0">
                     <div>
                         <p class="flex items-center justify-items-center   w-36 bg-[#1111110D] rounded-lg py-2.5 px-4 ">
                             <img src="assets/coin.png" alt="coin">
@@ -151,8 +145,9 @@
                   </div>
                   <div class="card-actions justify-end">
                     <button onclick="my_modal_5.showModal()" id="btn-add-donate3" class="btn  hover:bg-[#b4f461b3] hover:text-primary text-primary btn-primary w-full bg-secondary border-none  text-xl   ">Donate Now</button>
-                     
-                    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle ">
+                    
+                    <dialog id="my_modal_5" class="modal  sm:modal-middle ">
+                        
                         <div class="modal-box flex flex-col items-center">
                             <h3 class="text-4xl font-extrabold ">Congrates!</h3>
                              <img class=" mt-3 " src="assets/coin.png" alt="coin">
@@ -170,14 +165,16 @@
                 </div>
               </div>
           </section>
+
           <!--history start-->
-          <div id="history-donation">
+          
+          <div id="history-donation" class="hidden">
 
           </div>
           
     </main>
     
-
+     
    <script src="js/utilities.js"></script>
    <script src="js/index.js"></script> 
 </body>
