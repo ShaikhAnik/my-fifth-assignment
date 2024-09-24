@@ -65,13 +65,13 @@
         `
         document.getElementById('history-donation').appendChild(div);
 
-    
+      
     }else{
         alert("Invalid Donation Amount");
     }
 
 })
-
+/* ------------------------------------------------------------------------
 document.getElementById('btn-add-donate3').addEventListener('click',function(){
     const addDonationThird = getInputFieldValueById('input-add-donation3');
     const donateBalanceThird =getTextFieldValueById('donation-balance3');
@@ -105,10 +105,11 @@ document.getElementById('btn-add-donate3').addEventListener('click',function(){
     
     }else{
         alert("Invalid Donation Amount");
+        
     }
 
 })
- 
+ */
  
 const historyBtn =document.getElementById('history-button');
 const donationBtn =document.getElementById('donation-btn');
@@ -129,9 +130,58 @@ document.getElementById('card-section').classList.remove('hidden');
 document.getElementById('history-donation').classList.add('hidden');
 
 })
- 
 
 
+/*
+const addDonationThird = getInputFieldValueById('input-add-donation3');
+document.getElementById('btn-add-donate3').addEventListener('click',function(){
 
+    if( addDonationThird === '' && addDonationThird >0 ){
+       
+      
+    }else{ 
+        
+        myModal.showModal();}
+    
+})
+*/
 
+/**************************************************** */
   
+document.getElementById('btn-add-donate3').addEventListener('click',function(){
+    const addDonationThird = getInputFieldValueById('input-add-donation3');
+    const donateBalanceThird =getTextFieldValueById('donation-balance3');
+    const totalBalance= getTextFieldValueById('total-balance');
+    if( typeof addDonationThird === 'number' && !isNaN(addDonationThird) && addDonationThird >0 && addDonationThird <= totalBalance){
+    
+
+       
+
+        const newDonationBalance3= addDonationThird + donateBalanceThird;
+        document.getElementById('donation-balance3').innerText= newDonationBalance3;
+         
+                
+        
+        
+        const newTotalBalance = totalBalance - addDonationThird;
+        document.getElementById('total-balance').innerText = newTotalBalance;
+
+        
+       
+
+
+        const div = document.createElement('div');
+        div.classList.add('border','border-solid','rounded','border-gray-500','p-5','mb-6','mt-7');
+        div.innerHTML = `
+            <p class="text-lg font-bold">${addDonationThird} Taka is Donated for Aid for Injured in the Quota Movement</p>
+            <p class="text-gray-500"> Date : ${new Date().toString()}  </p>
+        `
+        document.getElementById('history-donation').appendChild(div);   
+        my_modal_5.showModal();
+    
+    }else{
+        alert("Invalid Donation Amount");
+       
+    }
+   
+})
